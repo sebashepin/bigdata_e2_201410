@@ -2,6 +2,15 @@ doctype html
 html
   head
     title= title
+    link(rel='stylesheet', href='/stylesheets/ui-darkness/jquery-ui-1.10.4.custom.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
+    script(type='text/javascript', src='/javascripts/arbor-full.js')
+    script(type='text/javascript', src='/javascripts/graphics.js')
+    script(type='text/javascript', src='//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js')
+    script(type='text/javascript', src='//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js')
+    script.
+      $(function() {
+        $(".date").datepicker({ maxDate: "+0d" , altFormat: "dd-mm-yy" });
+      });
   body
     block content

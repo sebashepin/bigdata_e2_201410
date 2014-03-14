@@ -1,5 +1,30 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h1 Consulta de Personajes Históricos
+  script.
+    function initialDateChange(){
+      var dateIni = new Date($('#initialDate').val());
+      var dateEnd = new Date($('#endDate').val());
+      if(dateIni>dateEnd){
+        alert('La fecha inicial no puede ser mayor que la fecha final.')
+        $('#initialDate').val('');
+      }
+    }
+    function endDateChange(){
+      var dateIni = new Date($('#initialDate').val());
+      var dateEnd = new Date($('#endDate').val());
+      if(dateEnd<dateIni){
+        alert('La fecha final no puede ser menor que la fecha inicial.')
+        $('#endDate').val('');
+      }
+    }
+  table
+    tr
+      td Fecha Inicial
+      td
+        input(id='initialDate', onchange='initialDateChange();').date
+    tr
+      td Fecha Final
+      td
+        input(id='endDate', onchange='endDateChange();').date
