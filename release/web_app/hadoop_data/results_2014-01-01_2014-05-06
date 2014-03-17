@@ -1,0 +1,27 @@
+{
+	"personajes":
+		[
+			{
+				"id":"test_1",
+				"fecha_nacimiento":"21-01-1889",
+				"name":"personaje de test 1"
+			},
+			{
+				"id":"test_2",
+				"fecha_nacimiento":"21-01-1889",
+				"name":"personaje de test 2"
+			},
+			{
+				"id":"test_3",
+				"fecha_nacimiento":"21-01-1889",
+				"name":"personaje de test 3"
+			}
+		],
+	"relaciones":
+		[
+			{
+				"desde":"test_1",
+				"hacia":"test_2"
+			}
+		]
+}

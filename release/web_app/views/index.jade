@@ -19,12 +19,21 @@ block content
         $('#endDate').val('');
       }
     }
-  table
-    tr
-      td Fecha Inicial
-      td
-        input(id='initialDate', onchange='initialDateChange();').date
-    tr
-      td Fecha Final
-      td
-        input(id='endDate', onchange='endDateChange();').date
+  form(id='queryForm', method='post')
+    table
+      tr
+        td Fecha Inicial
+        td
+          input(id='initialDate', onchange='initialDateChange();').date
+      tr
+        td Fecha Final
+        td
+          input(id='endDate', onchange='endDateChange();').date
+      tr
+        td
+        td
+          button(id='queryButton', type='submit', name='queryButton', value='StartHadoop').
+            Consultar
+  div
+    h1.
+      Completed Results
