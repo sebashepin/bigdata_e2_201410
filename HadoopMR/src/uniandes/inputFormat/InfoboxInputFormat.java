@@ -21,7 +21,7 @@ public class InfoboxInputFormat extends FileInputFormat<LongWritable, Text> {
 	@Override
 	public RecordReader<LongWritable, Text> createRecordReader(InputSplit split,
 			TaskAttemptContext context) throws IOException, InterruptedException {
-		return new InfoboxRecordReader();
+		return new InfoBoxRecordReader();
 	}
 
 }

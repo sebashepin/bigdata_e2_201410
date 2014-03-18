@@ -1,0 +1,2 @@
+eclipse.preferences.version=1
+org.jboss.ide.eclipse.as.core.singledeployable.deployableList=resources/OrfeoNonJTA-ds.xml\nresources/test/jbpm-ds.xml\nresources/Orfeo-ds.xml\nresources/jbpm-ds.xml\nresources/test/Orfeo-ds.xml\nresources/test/OrfeoNonJTA-ds.xml\n

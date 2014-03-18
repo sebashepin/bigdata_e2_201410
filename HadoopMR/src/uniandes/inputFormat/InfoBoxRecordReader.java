@@ -27,8 +27,10 @@ public class InfoBoxRecordReader extends RecordReader<LongWritable, Text> {
 	private long start;
 	private long pos;
 	private long end;
-	private Pattern delimiterPattern;
-	private String delimiterRegex;
+	private Pattern delimiterPatternStart;
+	private Pattern delimiterPatternEnd;
+	private String delimiterRegexStart;
+	private String delimiterRegexEnd;
 	private boolean readingRecord = false;
 	private final static Text EOL = new Text("\n");
 	private LineReader in;
