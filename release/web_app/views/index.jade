@@ -2,7 +2,7 @@ extends layout
 
 block content
   h1 Consulta de Personajes Históricos
-  script.
+  script(type='text/javascript').
     function initialDateChange(){
       var dateIni = new Date($('#initialDate').val());
       var dateEnd = new Date($('#endDate').val());
@@ -37,3 +37,13 @@ block content
   div
     h1.
       Completed Results
+    table
+      - for (var i = 0; i < results.length ; ++i) {
+        tr
+          td
+            a(href=('/results.html?resFile='+results[i]))
+              = results[i]
+          td
+            a(target='_blank',href=('/hadoop_data/'+results[i]+'.json'))
+              View Raw Data
+      - }

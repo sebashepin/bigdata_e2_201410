@@ -5,7 +5,7 @@
 
 var express = require('express');
 var routes = require('./routes');
-var user = require('./routes/user');
+var results = require('./routes/results');
 var http = require('http');
 var path = require('path');
 
@@ -23,6 +23,7 @@ app.use(express.methodOverride());
 app.use(app.router);
 app.use(require('stylus').middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/hadoop_data',express.static(path.join(__dirname, 'hadoop_data')));
 app.use(function(req,res){
 	res.redirect('/');
 });
@@ -33,8 +34,8 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
-app.get('/users', user.list);
+app.get('/results.html', results.graph);
 
 http.createServer(app).listen(app.get('port'), function(){
-	console.log('Express server listening on port ' + app.get('port'));
+	console.log('Servidor Grupo 5 esperando peticiones en puerto ' + app.get('port'));
 });

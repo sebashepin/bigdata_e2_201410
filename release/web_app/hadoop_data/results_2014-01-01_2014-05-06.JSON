@@ -22,6 +22,10 @@
 			{
 				"desde":"test_1",
 				"hacia":"test_2"
+			},			
+			{
+				"desde":"test_2",
+				"hacia":"test_3"
 			}
 		]
 }

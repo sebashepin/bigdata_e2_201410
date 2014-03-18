@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  script(type='text/javascript')
+    | var graph_data = {};
+    = "\n"
+    | $.get(    
+    = "\n"
+    =  "'"+data_url+"'"
+    = "\n"
+    |  , function( data ) {
+    = "\n"
+    |   graph_data = data;
+    = "\n"
+    |   alert(graph_data.personajes);
+    = "\n"
+    | });
+    = "\n"
+  h1 Resultado de Consulta de Personajes Históricos
+  p.='Archivo de resultados:'
+    strong= resFileName
