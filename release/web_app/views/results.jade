@@ -1,6 +1,7 @@
 extends layout
 
 block content
+  script(type='text/javascript',src='/javascripts/data_graph.js')
   script(type='text/javascript')
     | var graph_data = {};
     = "\n"
@@ -12,10 +13,12 @@ block content
     = "\n"
     |   graph_data = data;
     = "\n"
-    |   alert(graph_data.personajes);
+    |   renderGraphData('#graphview',graph_data);
+    = "\n"
     = "\n"
     | });
     = "\n"
   h1 Resultado de Consulta de Personajes Históricos
   p.='Archivo de resultados:'
     strong= resFileName
+  canvas(id="graphview", width="800", height="600")

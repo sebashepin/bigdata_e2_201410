@@ -1,31 +1,37 @@
 {
-	"personajes":
-		[
-			{
-				"id":"test_1",
-				"fecha_nacimiento":"21-01-1889",
-				"name":"personaje de test 1"
+	"nodes":
+		{
+			"test_1":{},
+			"test_2":{},
+			"test_3":{},
+			"test_4":{},
+			"test_5":{},
+			"test_6":{}
+		},
+	"edges":
+		{
+			"test_1":{
+				"test_2":{
+					"level":"level_1"
+				}
 			},
-			{
-				"id":"test_2",
-				"fecha_nacimiento":"21-01-1889",
-				"name":"personaje de test 2"
+			"test_2":{
+				"test_3":{
+					"level":"level_2"
+				}
 			},
-			{
-				"id":"test_3",
-				"fecha_nacimiento":"21-01-1889",
-				"name":"personaje de test 3"
+			"test_3":{
+				"test_1":{
+					"level":"level_1"
+				},
+				"test_6":{
+					"level":"level_2"
+				}
+			},
+			"test_4":{
+				"test_5":{
+					"level":"level_1"
+				}
 			}
-		],
-	"relaciones":
-		[
-			{
-				"desde":"test_1",
-				"hacia":"test_2"
-			},			
-			{
-				"desde":"test_2",
-				"hacia":"test_3"
-			}
-		]
+		}
 }
